@@ -7,7 +7,7 @@ container.setAttribute('style', 'display: grid; grid-template-columns: repeat(16
 
 for (let i = 0; i < (16 * 16) ; i++) {
     const div = document.createElement('div');
-    div.setAttribute('style', 'border: 1px solid white;');
+    div.setAttribute('style', 'background-color: white; border:1px solid lightgrey');
     container.appendChild(div);
     container.insertBefore(div, buttons);
     div.addEventListener('click', () => {
