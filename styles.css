@@ -1,0 +1,27 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightcoral;
+    min-height: 97vh;
+}
+
+.container {
+    padding: 7vh 7vh 0vh 7vh;
+    background-color: red;
+    border-radius: 5vh;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 640px;
+}
+
+.button {
+    border-radius: 100%;
+    background-color: wheat;
+    width: 75px;
+    height: 75px;
+    margin: 30px;
+}
