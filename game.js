@@ -17,7 +17,7 @@ for (let i = 0; i < (columns * rows); i++) {
 
   div.addEventListener("mousedown", function (event) {
     isMousedown = true;
-
+    div.setAttribute('style', 'background-color: black;');
   });
 
   div.addEventListener("mouseup", function (event) {
