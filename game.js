@@ -15,18 +15,26 @@ for (let i = 0; i < (columns * rows); i++) {
 
   var isMousedown = false;
 
-  div.addEventListener("mousedown", function (event) {
+  div.addEventListener("mousedown", () => {
     isMousedown = true;
+
     div.setAttribute('style', 'background-color: black;');
   });
 
-  div.addEventListener("mouseup", function (event) {
+  div.addEventListener("mouseup", () => {
     isMousedown = false;
   });
 
-  div.addEventListener("mousemove", function (event) {
+  div.addEventListener("mousemove", () => {
     if (isMousedown) {
-      div.setAttribute('style', 'background-color: black;');
+
+      if (body.style.background === 'rgb(255, 177, 204)') {
+        div.setAttribute('style', 'background-color: black;');
+       } else {
+        div.setAttribute('style', `background-color: rgb(${Math.floor(Math.random()*256)}, ${Math.floor(Math.random()*256)}, ${Math.floor(Math.random()*256)}); border:1px solid lightgrey`);
+       }
+
+      // div.setAttribute('style', 'background-color: black;');
 
     } else { }
   });
@@ -48,6 +56,7 @@ screen_array.forEach(screen => {
 
 const magic = document.querySelector('.magic');
 const body = document.querySelector('body');
+body.setAttribute('style', 'background: rgb(255, 177, 204)');
 magic.addEventListener('click', () => {
   if (body.style.background === 'rgb(255, 177, 204)') {
    body.setAttribute('style', 'background: #ffb1cc url(./drugs.gifv); background-size: cover;') 
