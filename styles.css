@@ -17,7 +17,7 @@ body {
     justify-content: space-between;
 }
 
-.button {
+.button, .magic {
     border-radius: 100%;
     background-color: wheat;
     width: 75px;
