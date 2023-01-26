@@ -35,11 +35,26 @@ for (let i = 0; i < (columns * rows); i++) {
 const erase = document.querySelector('.button');
 const screen = document.querySelectorAll('.screen');
 
-const screen_array = [...screen]; // converts NodeList to Screen
+const screen_array = [...screen]; // converts NodeList to array
 screen_array.forEach(screen => {
 
   erase.addEventListener('mousedown', () => {
     screen.setAttribute('style', 'background-color: white; border:1px solid lightgrey');
+    // screen.setAttribute('style', `background-color: rgb(${Math.floor(Math.random()*256)}, ${Math.floor(Math.random()*256)}, ${Math.floor(Math.random()*256)}); border:1px solid lightgrey`);
+
   });
 
 });
+
+const magic = document.querySelector('.magic');
+const body = document.querySelector('body');
+magic.addEventListener('click', () => {
+  if (body.style.background === 'rgb(255, 177, 204)') {
+   body.setAttribute('style', 'background: #ffb1cc url(./drugs.gifv); background-size: cover;') 
+  } else {
+    body.setAttribute('style', 'background: #ffb1cc')
+  }
+  
+  
+});
+body.style.background;
