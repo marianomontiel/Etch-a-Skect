@@ -1,4 +1,4 @@
-const container = document.querySelector('.container');
+var container = document.querySelector('.container');
 const buttons = document.querySelector('.buttons');
 const columns = 64;
 const rows = 64;
@@ -13,6 +13,48 @@ resolution.addEventListener('click', () => {resolutionChange();});
 function resolutionChange () {
   const resolution = prompt ('Choose screen resoltuion!');
   container.setAttribute('style', `display: grid; grid-template-columns: repeat(${resolution}, ${(640/resolution)}px); grid-template-rows: repeat(${resolution}, ${(640/resolution)}px);`);
+  
+ //remove previous divs before appending the new ones
+  const screen = document.querySelectorAll('.screen');
+
+const screen_array = [...screen]; // converts NodeList to array
+screen_array.forEach(screen => {
+  container.removeChild(screen);
+});
+ //add new divs
+  for (let i = 0; i < (resolution * resolution); i++) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'background-color: white; border:1px solid lightgrey',);
+  div.setAttribute('class', 'screen');
+  container.insertBefore(div, buttons);
+
+  var isMousedown = false;
+
+  div.addEventListener("mousedown", () => {
+    isMousedown = true;
+
+    div.setAttribute('style', 'background-color: black;');
+  });
+
+  div.addEventListener("mouseup", () => {
+    isMousedown = false;
+  });
+
+  div.addEventListener("mousemove", () => {
+    if (isMousedown) {
+
+      if (body.style.background === 'rgb(255, 177, 204)') {
+        div.setAttribute('style', 'background-color: black;');
+       } else {
+        div.setAttribute('style', `background-color: rgb(${Math.floor(Math.random()*256)}, ${Math.floor(Math.random()*256)}, ${Math.floor(Math.random()*256)}); border:1px solid lightgrey`);
+       }
+
+      // div.setAttribute('style', 'background-color: black;');
+
+    } else { }
+  });
+}  
+  
 };
 
 container.setAttribute('style', `display: grid; grid-template-columns: repeat(${columns}, ${divSize}px); grid-template-rows: repeat(${rows}, ${divSize}px);`);
