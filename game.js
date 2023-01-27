@@ -2,13 +2,18 @@ const container = document.querySelector('.container');
 const buttons = document.querySelector('.buttons');
 const columns = 64;
 const rows = 64;
-const divSize = '10';
+var divSize = '10';
 buttons.setAttribute('style', `width: ${columns * divSize}px`);
 
-var resolutionButton;
+//Add button to prompt for desired resolution
 const resolution = document.querySelector('#resolution');
-resolution.addEventListener('click', () => {resolutionButton = prompt ('Choose screen resoltuion!')});
-console.log(resolutionButton);
+resolution.addEventListener('click', () => {resolutionChange();});
+
+//resolution prompt and DOM manipulation function
+function resolutionChange () {
+  const resolution = prompt ('Choose screen resoltuion!');
+  container.setAttribute('style', `display: grid; grid-template-columns: repeat(${resolution}, ${(640/resolution)}px); grid-template-rows: repeat(${resolution}, ${(640/resolution)}px);`);
+};
 
 container.setAttribute('style', `display: grid; grid-template-columns: repeat(${columns}, ${divSize}px); grid-template-rows: repeat(${rows}, ${divSize}px);`);
 
