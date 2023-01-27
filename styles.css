@@ -7,9 +7,9 @@ body {
 }
 
 .container {
-    padding: 7vh 7vh 0vh 7vh;
+    padding: 1.7% 1.7% 0% 1.7% ;
     background-color: red;
-    border-radius: 5vh;
+    border-radius: 2%;
 }
 
 .buttons {
@@ -19,8 +19,21 @@ body {
 
 .button, .magic {
     border-radius: 100%;
+    color: wheat;
     background-color: wheat;
-    width: 75px;
-    height: 75px;
+    width: 72px;
+    height: 72px;
     margin: 30px;
+    box-shadow: -1px 2px black;
+}
+
+button:hover {
+  color: wheat;
+  background-color: grey;
+}
+
+button:active {
+  background-color: wheat;
+  box-shadow: 0 0px #666;
+  transform: translate(-2px, 1px);  
 }
