@@ -12,6 +12,7 @@ resolution.addEventListener('click', () => { resolutionChange(); });
 //Function for resolution prompt and DOM manipulation function
 function resolutionChange() {
   const resolution = prompt('Choose screen resoltuion!');
+  if (resolution < 100) {
   container.setAttribute('style', `display: grid; grid-template-columns: repeat(${resolution}, ${(640 / resolution)}px); grid-template-rows: repeat(${resolution}, ${(640 / resolution)}px);`);
 
   //remove previous divs before appending the new ones
@@ -47,6 +48,7 @@ function resolutionChange() {
       } else { }
     });
   }
+  }
 };
 
 container.setAttribute('style', `display: grid; grid-template-columns: repeat(${columns}, ${divSize}px); grid-template-rows: repeat(${rows}, ${divSize}px);`);
@@ -58,28 +60,20 @@ for (let i = 0; i < (columns * rows); i++) {
   container.insertBefore(div, buttons);
 
   var isMousedown = false;
-
   div.addEventListener("mousedown", () => {
     isMousedown = true;
-
     div.setAttribute('style', 'background-color: black;');
   });
-
   div.addEventListener("mouseup", () => {
     isMousedown = false;
   });
-
   div.addEventListener("mousemove", () => {
     if (isMousedown) {
-
       if (body.style.background === 'rgb(255, 177, 204)') {
         div.setAttribute('style', 'background-color: black;');
       } else {
         div.setAttribute('style', `background-color: rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}); border:1px solid lightgrey`);
       }
-
-      // div.setAttribute('style', 'background-color: black;');
-
     } else { }
   });
 }
@@ -106,6 +100,4 @@ magic.addEventListener('click', () => {
   } else {
     body.setAttribute('style', 'background: #ffb1cc')
   }
-
-
 });
