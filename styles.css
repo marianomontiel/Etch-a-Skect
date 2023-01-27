@@ -1,5 +1,6 @@
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background: #ffb1cc;
@@ -17,23 +18,29 @@ body {
     justify-content: space-between;
 }
 
-.button, .magic {
+div > button {
     border-radius: 100%;
     color: wheat;
     background-color: wheat;
+    border:1px solid grey;
     width: 72px;
     height: 72px;
     margin: 30px;
-    box-shadow: -1px 2px black;
+    box-shadow: -2px 4px black;
 }
 
-button:hover {
+div > button:hover {
   color: wheat;
   background-color: grey;
 }
 
-button:active {
+div > button:active {
   background-color: wheat;
   box-shadow: 0 0px #666;
-  transform: translate(-2px, 1px);  
+  transform: translate(-2px, 4px);  
+}
+
+#resolution {
+  display: block;
+  margin: 20px;
 }
