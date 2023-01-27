@@ -2,8 +2,13 @@ const container = document.querySelector('.container');
 const buttons = document.querySelector('.buttons');
 const columns = 64;
 const rows = 64;
-const divSize = '10'
+const divSize = '10';
 buttons.setAttribute('style', `width: ${columns * divSize}px`);
+
+var resolutionButton;
+const resolution = document.querySelector('#resolution');
+resolution.addEventListener('click', () => {resolutionButton = prompt ('Choose screen resoltuion!')});
+console.log(resolutionButton);
 
 container.setAttribute('style', `display: grid; grid-template-columns: repeat(${columns}, ${divSize}px); grid-template-rows: repeat(${rows}, ${divSize}px);`);
 
@@ -66,4 +71,3 @@ magic.addEventListener('click', () => {
   
   
 });
-body.style.background;
