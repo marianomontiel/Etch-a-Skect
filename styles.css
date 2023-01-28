@@ -11,6 +11,7 @@ body {
     padding: 1.7% 1.7% 0% 1.7% ;
     background-color: red;
     border-radius: 2%;
+    /* max-width: 97vh; */
 }
 
 .buttons {
@@ -37,10 +38,23 @@ div > button:hover {
 div > button:active {
   background-color: wheat;
   box-shadow: 0 0px #666;
-  transform: translate(-2px, 4px);  
+  transform: translate(-2px, 4px);
 }
 
 #resolution {
+  font-size: medium;
+  font-weight: bold;
   display: block;
   margin: 20px;
+  padding: 15px 32px;
+  background-color: orange;
+  border: 2px solid white;
+  color: white;
+}
+
+button#resolution:hover {
+  background-color: white;
+  padding: 15px 32px;
+  border: 2px solid darkorange;
+  color: darkorange;
 }
