@@ -33,19 +33,19 @@ h1 {
     /* max-width: 97vh; */
 }
 
-.button, .magic {
+/* .button, .magic, input[type=color] {
     margin: 30px;
 }
 
-.button:hover, .magic:hover {
+.button:hover, .magic:hover, input[type=color]:hover {
   color: wheat;
   background-color: grey;
 }
 
-.button:active, .magic:active {
+.button:active, .magic:active, input[type=color]:active {
   background-color: wheat;
   box-shadow: 0 0px #666;
-}
+} */
 
 #resolution {
   font-size: medium;
@@ -58,13 +58,33 @@ h1 {
   color: white;
 }
 
-button#resolution:hover {
+button#resolution:hover, type#resolution:hover {
   background-color: darkorange;
 }
 
-button#resolution:active {
+button#resolution:active, type#resolution:active {
   background-color: white;
   padding: 15px 32px;
   border: 2px solid darkorange;
   color: darkorange;
+}
+
+/* Add formating to input color picker */
+.more_colors {
+  position: relative;
+  display: inline-flex;
+  cursor: pointer;
+  border-radius: 20px;
+  background-color: rgb(152, 219, 43);
+  margin: 10px;
+}
+
+.more_colors label {
+  padding: 15px 25px;
+}
+
+.more_colors input {
+  visibility: hidden;
+  position: absolute;
+  bottom: 0;
 }
