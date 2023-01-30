@@ -44,7 +44,7 @@ h1 {
   color: white;
 }
 
-button#resolution:hover {
+button#resolution:hover, .more_colors label:hover {
   background-color: darkorange;
 }
 
@@ -64,6 +64,9 @@ button#resolution:active {
   background-color: orange;
   border: 2px solid white;
   color: white;
+  white-space: nowrap;
+  font-size: medium;
+  font-weight: bold;
 }
 
 .more_colors label {
@@ -74,4 +77,8 @@ button#resolution:active {
   visibility: hidden;
   position: absolute;
   bottom: 0;
+}
+
+.more_colors, button {
+  font-family: 'Courier New', Courier, monospace;
 }
