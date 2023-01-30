@@ -76,7 +76,10 @@ button#resolution:active, type#resolution:active {
   cursor: pointer;
   border-radius: 20px;
   background-color: rgb(152, 219, 43);
-  margin: 10px;
+  margin: 20px;
+  background-color: orange;
+  border: 2px solid white;
+  color: white;
 }
 
 .more_colors label {
