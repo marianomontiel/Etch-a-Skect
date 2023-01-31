@@ -54,31 +54,3 @@ button#resolution:active {
   border: 2px solid darkorange;
   color: darkorange;
 }
-
-/* Add formating to input color picker */
-.more_colors {
-  position: relative;
-  display: inline-flex;
-  cursor: pointer;
-  margin: 20px;
-  background-color: orange;
-  border: 2px solid white;
-  color: white;
-  white-space: nowrap;
-  font-size: medium;
-  font-weight: bold;
-}
-
-.more_colors label {
-  padding: 15px 32px;
-}
-
-.more_colors input {
-  visibility: hidden;
-  position: absolute;
-  bottom: 0;
-}
-
-.more_colors, button {
-  font-family: 'Courier New', Courier, monospace;
-}
